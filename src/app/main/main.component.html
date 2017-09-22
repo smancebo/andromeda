@@ -1,0 +1,98 @@
+<div class="">
+  <div class="menu-show visible-xs" (click)="openMenu()"></div>
+  <div class="backdrop hide"></div>
+  <div class="menu">
+    <h5 class="close-menu visible-xs"><a class="fa fa-remove no-decorate" (click)="closeMenu(this)"></a></h5>
+    <div class="user-panel">
+      <h6 class="username">
+        <div class="name">{{username}}</div>
+        <div class="dropdown">
+          <a id="userMenu" class="fa fa-cog dropdown-toggle" href="#" data-toggle="dropdown">
+              <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="userMenu">
+            <li><a (click)="logOff()" i18n>Cerrar Sesión</a></li>
+          </ul>
+        </div>
+
+      </h6>
+      <h6 class="user-group">admin</h6>
+    </div>
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a href="#transacciones" data-toggle="collapse" data-parent="#accordion" ><i class="fa fa-money"></i><span i18n>Transacciones</span></a>
+          </h4>
+        </div>
+        <div id="transacciones" class="panel-collapse collapse in">
+          <div class="list-group">
+            <a href='#' class="list-group-item list-group-item-action" i18n>Compra</a>
+            <a href='#' class="list-group-item list-group-item-action" i18n>Venta</a>
+            <a href='#' class="list-group-item list-group-item-action" i18n>Canje</a>
+            <a href='#' class="list-group-item list-group-item-action" i18n>Mesa de Divisas</a>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a href="#mantenimientos" data-parent="#accordion" data-toggle="collapse">
+              <i class="fa fa-table"></i>
+              <span i18n>Mantenimientos</span>
+            </a>
+          </h4>
+        </div>
+        <div id="mantenimientos" class="panel-collapse collapse">
+          <div class="list-group">
+            <a href='#' class="list-group-item list-group-item-action" i18n>Usuarios</a>
+            <a href='#' class="list-group-item list-group-item-action" i18n>Empresa</a>
+            <a href='#' class="list-group-item list-group-item-action" i18n>Sucursales</a>
+            <a href='#' class="list-group-item list-group-item-action" i18n>Agencias</a>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a href="#reportes" data-toggle="collapse" data-parent="#accordion">
+              <i class="fa fa-file"></i>
+              <span i18n>Reportes</span>
+            </a>
+          </h4>
+        </div>
+        <div id="reportes" class="panel-collapse collapse">
+          <div class="list-group">
+            <a href='#' class="list-group-item list-group-item-action"></a>
+            <a href='#' class="list-group-item list-group-item-action"></a>
+            <a href='#' class="list-group-item list-group-item-action"></a>
+            <a href='#' class="list-group-item list-group-item-action"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app-version">
+      <div class="name">Andromeda</div>
+      <div class="version">v 1.0.0</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="app-form">
+      <div class="title">
+        <h3>title</h3>
+      </div>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="control-area">
+        <div class="separator"></div>
+        <button class="btn btn-primary" (click)="changeName()">Aceptar</button>
+        <button class="btn btn-success">Aceptar</button>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

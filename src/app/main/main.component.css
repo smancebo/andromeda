@@ -1,0 +1,208 @@
+
+
+.title {
+  padding: 15px 15px;
+  color: #606067;
+}
+
+.title h3 {
+  margin: 0;
+  text-transform: capitalize;
+  ;
+}
+
+.app-form {
+  box-shadow: 0px 4px 10px #ddd;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.app-form .content {
+  min-height: 200px
+}
+
+.app-form .control-area {
+  padding: 10px;
+  text-align: right;
+}
+
+.app-form .control-area .separator {
+  border-top: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.hamburger {
+  display: inline-block;
+}
+
+.hamburger .bar {
+  background-color: white;
+  border-radius: 5px;
+  height: 1px
+}
+
+.menu {
+  background-color: #ecf0f1;
+   border-right: 1px solid #2c3e50;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  color: #2c3e50;
+  min-width: 210px;
+  max-width: 100px;
+  height: 100vh;
+  min-height: 645px;
+  float: left;
+  padding: 10px;
+  padding-top: 5px;
+  transition: margin-left 200ms ease-out
+}
+
+.menu.closed {
+  margin-left: -210px !important;
+}
+
+.menu.xs {
+  z-index: 1;
+    position: absolute;
+}
+
+.no-menu {
+  margin-left: 0 !important;
+}
+
+.menu-show {
+  background-color: #2c3e50;
+  height: 45px;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: margin-left 100ms ease-out;
+  cursor: pointer;
+
+}
+.menu-show.closed {
+  margin-left: -10px !important;
+}
+.content {
+  margin-left: 210px;
+  padding: 10px;
+  min-width: 500px;
+  transition: margin-left 200ms ease-out;
+}
+
+.app-name {
+  float: left;
+}
+
+.ul-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.ul-menu li.menu-item {
+  text-align: center;
+    padding: 2px;
+    font-size: 12px;
+    padding-bottom: 10px;
+
+}
+
+
+
+.ul-menu li a.menu-text {
+  color: #2c3e50;
+  text-decoration: none;
+}
+.ul-menu li a.menu-text:hover {
+  text-decoration: none;
+
+}
+
+.ul-menu li.menu-item:not(:first-child) {
+    padding-top: 10px;
+}
+.ul-menu li i.fa {
+  display: block;
+  font-size: 20pt
+}
+
+.panel-title i {
+  margin-right: 5px
+}
+.panel-title a:hover, .panel-title a:active, .panel-title a:focus {
+  text-decoration: none;
+}
+
+.user-panel {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-right: 5px;
+}
+.user-panel .username .fa-cog {
+  float: right;
+  color: #2C3E55
+}
+.user-panel .username {
+  margin: 0;
+}
+.user-panel .username .name {
+  display: inline-block;
+}
+.user-panel .username .dropdown {
+  display: inline-block;
+  float: right;
+}
+.user-panel .fa-caret-down {
+  position: relative;
+  top: 5px;
+  left: -5px;
+  font-size: 6pt;
+}
+.user-panel .user-group {
+  margin: 0;
+  color: #606067;
+}
+
+.user-panel .username .fa-cog:hover, .user-panel .username .fa-cog:focus, .user-panel .username .fa-cog:active, .no-decorate {
+  text-decoration: none;
+}
+
+.app-version {
+  bottom: 0;
+  position: absolute;
+  color: #606067;
+  opacity: .3;
+  font-size: 8pt;
+  margin-bottom: 10px;
+  border: 1px solid #606067;
+  width: 190px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.close-menu {
+  width: 190px;
+  text-align: right;
+  margin-top: 0;
+  cursor: pointer;
+}
+.close-menu a {
+  color: #2C3E55
+}
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  top: 0;
+  opacity: .4;
+}
+
+.dropdown-menu a {
+  cursor: pointer;
+}
