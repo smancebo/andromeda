@@ -1,7 +1,9 @@
+import { MantenimientoModule } from './mantenimientos/mantenimiento.module';
+
 export const mainChilds = [
   // {path: 'operaciones', loadChildren: ''},
   // {path: 'procesos', loadChildren: ''},
-  {path: 'mantenimiento', loadChildren: ''},
+  {path: 'mantenimientos', loadChildren: () => MantenimientoModule},
   // {path: 'configuracion', loadChildren: ''},
   // {path: 'reportes', loadChildren: ''},
 ];

@@ -8,4 +8,4 @@ const loginRoutes: Routes = [
   {path: 'login', component: LoginComponent}
 ];
 
-export const LoginRouting: ModuleWithProviders = RouterModule.forRoot(loginRoutes);
+export const LoginRouting: ModuleWithProviders = RouterModule.forChild(loginRoutes);

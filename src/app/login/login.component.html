@@ -1,23 +1,29 @@
 <div class="row">
   <div>
-    <form class=" login-form" #loginForm>
+    <form #loginForm="ngForm" class="login-form">
       <h2 i18n>Andromeda</h2>
+      <div class="logo">
+        <div class="holder">
+          <object data="assets/svg/andromeda.svg" type="image/svg+xml"> </object>
+        </div>
+      </div>
+
       <div class="form-group">
         <label i18n>Usuario</label>
         <div class="input-group col-md-12">
           <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <input name="username" type="text" class="form-control" [(ngModel)]="username" required>
+          <input #username="ngModel" name="username" type="text" class="form-control" [(ngModel)]="user.username" required>
         </div>
       </div>
       <div class="form-group">
         <label i18n>Contraseña</label>
         <div class="input-group col-md-12">
           <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-          <input type="password" name="password" class="form-control" [(ngModel)]="password" required>
+          <input #password="ngModel" type="password" name="password" class="form-control" [(ngModel)]="user.password" required>
         </div>
       </div>
-      {{loginForm | json}}
-      <button #btnLogin class="btn btn-success col-md-12 col-xs-12" i18n (click)="login()">Iniciar Sesión</button>
+      <button #btnLogin [disabled]="!loginForm.form.valid" class="btn btn-success col-md-12 col-xs-12" i18n (click)="login()">Iniciar Sesión</button>
+
     </form>
   </div>
 </div>

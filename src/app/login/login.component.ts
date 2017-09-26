@@ -3,6 +3,7 @@ import { LoginService } from './login.service';
 import { AlertsService } from '@jaspero/ng2-alerts';
 import { AppCredentials } from '../shared/models/app-credentials';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -13,15 +14,16 @@ export class LoginComponent implements OnInit {
   @ViewChild('btnLogin') btnLogin: ElementRef;
   constructor(public $login: LoginService, private _alert: AlertsService, private _router: Router) { }
 
-  username: string;
-  password: string;
-
+  user = {
+    username: '',
+    password: ''
+  };
   ngOnInit() {
   }
 
   async login() {
     this.btnLogin.nativeElement.disabled = true;
-    const response = await (this.$login.login(this.username, this.password));
+    const response = await (this.$login.login(this.user.username, this.user.password));
     const body = response.json();
     if (body.code === 'USR_SUCCESS') {
       const {username, token} = body;

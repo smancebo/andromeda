@@ -12,3 +12,17 @@
 {
   text-align: center;
 }
+
+.logo {
+  text-align: center;
+}
+
+.logo .holder {
+  display: inline-block;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.logo object {
+  width: 150px;
+}

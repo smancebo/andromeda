@@ -45,7 +45,7 @@
         </div>
         <div id="mantenimientos" class="panel-collapse collapse">
           <div class="list-group">
-            <a href='#' class="list-group-item list-group-item-action" i18n>Usuarios</a>
+            <a routerLink="mantenimientos/usuarios" class="list-group-item list-group-item-action" i18n>Usuarios</a>
             <a href='#' class="list-group-item list-group-item-action" i18n>Empresa</a>
             <a href='#' class="list-group-item list-group-item-action" i18n>Sucursales</a>
             <a href='#' class="list-group-item list-group-item-action" i18n>Agencias</a>
@@ -78,21 +78,10 @@
   </div>
 
   <div class="content">
-    <div class="app-form">
-      <div class="title">
-        <h3>title</h3>
-      </div>
-      <div class="content">
-        <router-outlet></router-outlet>
-      </div>
-      <div class="control-area">
-        <div class="separator"></div>
-        <button class="btn btn-primary" (click)="changeName()">Aceptar</button>
-        <button class="btn btn-success">Aceptar</button>
-      </div>
-    </div>
-
-
+    <router-outlet></router-outlet>
   </div>
+
+
+
 
 </div>
